@@ -1,16 +1,17 @@
 body {
-  background-image: url(bg1.jpg);
+  background-image: url(bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  background-color: #000;
-  /* background-color: #141a23; */
+  background-color: #141a23; 
 }
 .records {
   display: flex;
   flex-wrap: wrap;
 }
 .record-card {
+  display: flex;
+  flex-direction: column;
   padding: 2%;
   flex-grow: 1;
   flex-basis: 16%;
@@ -18,7 +19,7 @@ body {
 img{
   border: 1px solid #253241;
 }
-h2, h3, h4 {
+h1, h2, h3, h4 {
   color: rgb(175, 172, 172);
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
@@ -39,7 +40,9 @@ h2, h3, h4 {
   color: rgb(175, 172, 172);
   border: none;
 }
-a{
+.origin{
+  font-size: 10px;
+  font-style: italic;
   color: rgb(175, 172, 172);
   font-family: 'Lato', sans-serif;
   text-decoration: none;
@@ -58,12 +61,105 @@ p{
 nav{
   background: #253241;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 15px;
 }
 .link{
-  padding: 10px 40px;
+  padding: 10px;
   text-decoration: none;
   color: rgb(175, 172, 172);
   text-transform: uppercase;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}  
+.container{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.button{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.buttonChange{
+  color: rgb(175, 172, 172);
+  font-family: 'Lato', sans-serif;
+  background-color:#253241;
+  border: none;
+  width: 200px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.main-about{
+  display: flex;
+  flex-direction: column;
+}
+.heading{
+  text-align: center; 
+}
+.about{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-self: center;
+  width: 600px;
+}
+
+@media all and (max-width: 1024px){
+  .shop{
+    background-color: #141a23;
+  }
+  .record-card{
+    align-items: center;
+    padding: 5%;
+  }
+  nav{
+    min-width: 70%;
+  }
+}
+@media all and (max-width: 540px){
+  .about{
+    width: 400px;
+  }
+}
+@media all and (max-width: 414px){
+  .buttonChange{
+    width: 150px;
+  } 
+  .about{
+    width: 340px;
+  }
+  .image{
+    width: 400px;
+  }
+}
+@media all and (max-width: 393px){
+  .about{
+    width: 310px;
+  }
+  .image{
+    width: 355px;
+  }
+  .heading{
+    font-size: 20px;
+  }
+}
+@media all and (max-width: 280px){
+  img{
+    width: 275px;
+  }
+  .buttonChange{
+    width: 100px;
+  }
+  .about{
+    width: 240px;
+  }
+  .image{
+    width: 270px;
+  }
 }

@@ -22,14 +22,14 @@ function Shop(){
   
     return (
       
-      <div>
+      <div className='shop'>
     
         <Buttons chosenRecords={chosenRecords}/>
         <Records 
         records={records} 
         showTextClick={showTextClick}/>
   
-      <p><a href="https://www.barnesandnoble.com/">All content taken from Barnes&Noble for studying purpose</a></p>
+      <p><a className="origin" href="https://www.barnesandnoble.com/">All content was taken from Barnes&Noble for studying purpose</a></p>
       </div>
     );
 
