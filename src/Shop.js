@@ -8,9 +8,9 @@ function Shop(){
 
     const [records, setRecords] = useState(data);
     const [showText, setShowText] = useState(false);
-  
+
     const chosenRecords = (searchTerm) => {
-      const newRecords = data.filter (element => 
+    const newRecords = data.filter (element => 
         element.searchTerm === searchTerm);
         setRecords(newRecords);
     }
@@ -21,18 +21,13 @@ function Shop(){
     }
   
     return (
-      
       <div className='shop'>
-    
         <Buttons chosenRecords={chosenRecords}/>
         <Records 
         records={records} 
         showTextClick={showTextClick}/>
-  
-      <p><a className="origin" href="https://www.barnesandnoble.com/">All content was taken from Barnes&Noble for studying purpose</a></p>
+        <p><a className="origin" href="https://www.barnesandnoble.com/">All content was taken from Barnes&Noble for studying purpose</a></p>
       </div>
     );
-
-
 }
 export default Shop;
